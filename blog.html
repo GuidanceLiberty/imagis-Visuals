@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b12" />
+
+  <title>Creative Blog | IMAGIS VISUALS - Ogar Doniel Spark</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    .blog-page {
+      min-height: 100vh;
+      padding: 130px 7% 90px;
+      background: var(--black, #080b12);
+      color: #fff;
+    }
+
+    .blog-hero {
+      max-width: 800px;
+      margin: 0 auto 55px;
+      text-align: center;
+    }
+
+    .blog-label {
+      display: inline-block;
+      color: var(--primary-color, #0ea5e9);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .blog-hero h1 {
+      font-size: clamp(36px, 6vw, 60px);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .blog-hero h1 span {
+      color: var(--primary-color, #0ea5e9);
+    }
+
+    .blog-hero p {
+      color: #a7afbd;
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .blog-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .blog-card {
+      background: #111827;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: 0.35s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-7px);
+      border-color: var(--primary-color, #0ea5e9);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+
+    .blog-image {
+      position: relative;
+      height: 260px;
+      overflow: hidden;
+      background: #1b2638;
+    }
+
+    .blog-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .blog-card:hover .blog-image img {
+      transform: scale(1.06);
+    }
+
+    .blog-category {
+      position: absolute;
+      left: 20px;
+      bottom: 18px;
+      padding: 8px 13px;
+      border-radius: 5px;
+      background: var(--primary-color, #0ea5e9);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .blog-content {
+      padding: 25px;
+    }
+
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #8491a5;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    .blog-meta i {
+      color: var(--primary-color, #0ea5e9);
+      font-size: 15px;
+    }
+
+    .blog-content h2 {
+      font-size: 21px;
+      line-height: 1.4;
+      margin-bottom: 13px;
+    }
+
+    .blog-content p {
+      color: #a7afbd;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .blog-bottom {
+      max-width: 1150px;
+      margin: 55px auto 0;
+      padding: 35px;
+      border-radius: 18px;
+      text-align: center;
+      background: linear-gradient(
+        135deg,
+        rgba(14,165,233,0.15),
+        rgba(17,24,39,0.95)
+      );
+      border: 1px solid rgba(14,165,233,0.2);
+    }
+
+    .blog-bottom h2 {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .blog-bottom p {
+      color: #a7afbd;
+      line-height: 1.8;
+      margin-bottom: 22px;
+    }
+
+    .blog-contact {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 23px;
+      background: var(--primary-color, #0ea5e9);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .blog-contact:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(14,165,233,0.2);
+    }
+
+    @media (max-width: 750px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .blog-image {
+        height: 280px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .blog-page {
+        padding: 110px 5% 65px;
+      }
+
+      .blog-image {
+        height: 220px;
+      }
+
+      .blog-content {
+        padding: 21px;
+      }
+
+      .blog-content h2 {
+        font-size: 19px;
+      }
+
+      .blog-bottom {
+        padding: 27px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <main class="blog-page">
+
+    <!-- Blog Introduction -->
+    <section class="blog-hero">
+      <span class="blog-label">The Creative Journal</span>
+
+      <h1>
+        Stories Behind <span>The Lens.</span>
+      </h1>
+
+      <p>
+        Explore ideas, creative perspectives and insights from the world
+        of filmmaking, cinematography, video editing and visual storytelling.
+      </p>
+    </section>
+
+    <!-- Blog Articles -->
+    <section class="blog-grid">
+
+      <!-- Article 1 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img
+            src="image/blog1.jpg"
+            alt="Cinematographer capturing a cinematic scene"
+            loading="lazy"
+          />
+          <span class="blog-category">Cinematography</span>
+        </div>
+
+        <div class="blog-content">
+          <div class="blog-meta">
+            <i class="ri-camera-line"></i>
+            <span>Behind the Camera</span>
+          </div>
+
+          <h2>The Art of Cinematic Storytelling</h2>
+
+          <p>
+            Discover how camera angles, lighting, framing and movement
+            work together to communicate emotions and tell compelling
+            visual stories.
+          </p>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img
+            src="image/blog2.jpg"
+            alt="Professional video editing workstation"
+            loading="lazy"
+          />
+          <span class="blog-category">Video Editing</span>
+        </div>
+
+        <div class="blog-content">
+          <div class="blog-meta">
+            <i class="ri-film-line"></i>
+            <span>Post-Production</span>
+          </div>
+
+          <h2>What Makes a Great Video Edit?</h2>
+
+          <p>
+            Explore the importance of pacing, transitions, sound,
+            colour and storytelling in transforming raw footage
+            into a polished visual experience.
+          </p>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img
+            src="image/blog3.jpg"
+            alt="Film production crew working on a video shoot"
+            loading="lazy"
+          />
+          <span class="blog-category">Film Production</span>
+        </div>
+
+        <div class="blog-content">
+          <div class="blog-meta">
+            <i class="ri-video-line"></i>
+            <span>Production Insights</span>
+          </div>
+
+          <h2>Behind the Scenes of Film Production</h2>
+
+          <p>
+            Take a closer look at the planning, teamwork, equipment
+            and creative coordination that help bring a production
+            from concept to screen.
+          </p>
+        </div>
+      </article>
+
+      <!-- Article 4 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img
+            src="image/blog4.jpg"
+            alt="Creative video creator filming digital content"
+            loading="lazy"
+          />
+          <span class="blog-category">Content Creation</span>
+        </div>
+
+        <div class="blog-content">
+          <div class="blog-meta">
+            <i class="ri-lightbulb-line"></i>
+            <span>Creative Ideas</span>
+          </div>
+
+          <h2>Creating Visual Content That Connects</h2>
+
+          <p>
+            Learn why strong concepts, thoughtful visuals and
+            audience-focused storytelling matter when creating
+            engaging content for digital platforms.
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="blog-bottom">
+      <h2>Have a Creative Idea?</h2>
+
+      <p>
+        Every memorable production begins with an idea.
+        Let's work together to bring yours to life.
+      </p>
+
+      <a href="contact.html" class="blog-contact">
+        Let's Work Together
+        <i class="ri-arrow-right-line"></i>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Main JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

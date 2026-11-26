@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore professional video editing, film production, cinematography, camera operation and content creation services by IMAGIS VISUALS." />
+  <title>Services | IMAGIS VISUALS</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Remix Icon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <style>
+    /* SERVICES PAGE */
+    .services-page {
+      padding: 145px 7% 90px;
+      background: var(--black);
+      color: var(--white);
+      min-height: 100vh;
+    }
+
+    .services-hero {
+      max-width: 850px;
+      margin: 0 auto 65px;
+      text-align: center;
+    }
+
+    .services-hero .eyebrow {
+      color: var(--primary-color);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .services-hero h1 {
+      font-size: clamp(2.3rem, 5vw, 3.8rem);
+      line-height: 1.15;
+      margin: 18px 0;
+    }
+
+    .services-hero h1 span {
+      color: var(--primary-color);
+    }
+
+    .services-hero p {
+      color: #b5b5b5;
+      font-size: 1rem;
+      line-height: 1.9;
+      max-width: 680px;
+      margin: auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .creative-service-card {
+      position: relative;
+      padding: 35px 28px;
+      background: #151515;
+      border: 1px solid #292929;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: 0.35s ease;
+    }
+
+    .creative-service-card::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: var(--primary-color);
+      top: 0;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: 0.35s ease;
+    }
+
+    .creative-service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(14, 165, 233, 0.55);
+      background: #191919;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    }
+
+    .creative-service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 13px;
+      background: rgba(14, 165, 233, 0.12);
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin-bottom: 27px;
+    }
+
+    .creative-service-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+      color: #fff;
+    }
+
+    .creative-service-card p {
+      color: #aaa;
+      font-size: 0.94rem;
+      line-height: 1.8;
+    }
+
+    .service-index {
+      position: absolute;
+      top: 27px;
+      right: 25px;
+      color: #414141;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .service-bottom {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--primary-color);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 25px;
+    }
+
+    .service-bottom i {
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+
+    .creative-service-card:hover .service-bottom i {
+      transform: translateX(5px);
+    }
+
+    /* SERVICE CALL TO ACTION */
+    .services-cta {
+      max-width: 1250px;
+      margin: 90px auto 0;
+      padding: 50px 35px;
+      text-align: center;
+      border-radius: 16px;
+      border: 1px solid rgba(14, 165, 233, 0.25);
+      background: linear-gradient(135deg, #151515, #10212a);
+    }
+
+    .services-cta h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin-bottom: 15px;
+    }
+
+    .services-cta p {
+      color: #b5b5b5;
+      line-height: 1.8;
+      max-width: 650px;
+      margin: 0 auto 28px;
+    }
+
+    .services-cta .btn {
+      display: inline-block;
+    }
+
+    @media (max-width: 950px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-page {
+        padding: 120px 6% 65px;
+      }
+
+      .services-hero {
+        margin-bottom: 45px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+      }
+
+      .creative-service-card {
+        padding: 30px 23px;
+      }
+
+      .services-cta {
+        margin-top: 65px;
+        padding: 38px 22px;
+      }
+
+      .services-cta .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+
+  <main class="services-page">
+
+    <!-- SERVICES INTRODUCTION -->
+    <section class="services-hero">
+
+      <span class="eyebrow">What I Bring To The Frame</span>
+
+      <h1>
+        Creative Services.
+        <span>Powerful Visuals.</span>
+      </h1>
+
+      <p>
+        From capturing the perfect shot to crafting the final edit,
+        I bring creative ideas to life through professional video
+        production, cinematography and visual storytelling.
+        Every project is approached with attention to detail,
+        creativity and a passion for quality.
+      </p>
+
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section class="services-grid">
+
+      <article class="creative-service-card">
+        <span class="service-index">01</span>
+
+        <div class="service-icon">
+          <i class="ri-movie-2-line"></i>
+        </div>
+
+        <h3>Video Editing</h3>
+
+        <p>
+          Transforming raw footage into polished and engaging
+          videos through creative editing, smooth transitions,
+          pacing and visual storytelling.
+        </p>
+
+        <div class="service-bottom">
+          <span>Creative Editing</span>
+          <i class="ri-arrow-right-line"></i>
+        </div>
+      </article>
+
+      <article class="creative-service-card">
+        <span class="service-index">02</span>
+
+        <div class="service-icon">
+          <i class="ri-film-line"></i>
+        </div>
+
+        <h3>Film Production</h3>
+
+        <p>
+          Bringing creative concepts to life through production
+          planning, coordination and execution, from the initial
+          idea to the final visual output.
+        </p>
+
+        <div class="service-bottom">
+          <span>Production Process</span>
+          <i class="ri-arrow-right-line"></i>
+        </div>
+      </article>
+
+      <article class="creative-service-card">
+        <span class="service-index">03</span>
+
+        <div class="service-icon">
+          <i class="ri-camera-3-line"></i>
+        </div>
+
+        <h3>Cinematography</h3>
+
+        <p>
+          Creating compelling visuals through thoughtful
+          composition, camera movement, framing and lighting
+          to communicate stories through images.
+        </p>
+
+        <div class="service-bottom">
+          <span>Visual Direction</span>
+          <i class="ri-arrow-right-line"></i>
+        </div>
+      </article>
+
+      <article class="creative-service-card">
+        <span class="service-index">04</span>
+
+        <div class="service-icon">
+          <i class="ri-video-on-line"></i>
+        </div>
+
+        <h3>Camera Operation</h3>
+
+        <p>
+          Capturing important moments and production footage
+          with technical camera skills, attention to framing
+          and an understanding of visual composition.
+        </p>
+
+        <div class="service-bottom">
+          <span>Professional Camera Work</span>
+          <i class="ri-arrow-right-line"></i>
+        </div>
+      </article>
+
+      <article class="creative-service-card">
+        <span class="service-index">05</span>
+
+        <div class="service-icon">
+          <i class="ri-magic-line"></i>
+        </div>
+
+        <h3>Post-Production</h3>
+
+        <p>
+          Refining recorded footage through editing and
+          post-production workflows to create a cohesive
+          and professional final presentation.
+        </p>
+
+        <div class="service-bottom">
+          <span>Final Visual Polish</span>
+          <i class="ri-arrow-right-line"></i>
+        </div>
+      </article>
+
+      <article class="creative-service-card">
+        <span class="service-index">06</span>
+
+        <div class="service-icon">
+          <i class="ri-play-circle-line"></i>
+        </div>
+
+        <h3>Content Creation</h3>
+
+        <p>
+          Developing engaging visual content for music,
+          events and digital platforms, with a focus on
+          creativity, audience engagement and storytelling.
+        </p>
+
+        <div class="service-bottom">
+          <span>Digital Visual Content</span>
+          <i class="ri-arrow-right-line"></i>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="services-cta">
+
+      <h2>Have A Project In Mind?</h2>
+
+      <p>
+        Whether you're planning a production, need creative
+        video editing or want compelling visual content,
+        let's bring your idea to life.
+      </p>
+
+      <button class="btn">
+        <a href="contact.html">Let's Work Together</a>
+      </button>
+
+    </section>
+
+  </main>
+
+  <!-- LOAD NAVBAR -->
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      })
+      .catch(error => console.error("Navbar loading error:", error));
+  </script>
+
+  <!-- MAIN JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

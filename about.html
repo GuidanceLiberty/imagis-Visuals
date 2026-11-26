@@ -1,0 +1,530 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meet Ogar Doniel Spark, video editor, film producer, cinematographer and camera operator at IMAGIS VISUALS." />
+  <title>About | IMAGIS VISUALS</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <style>
+    /* ABOUT PAGE */
+    .about-page {
+      padding: 130px 7% 80px;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .about-intro {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: center;
+      gap: 65px;
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .about-photo {
+      position: relative;
+      min-height: 480px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #171717;
+      border: 1px solid rgba(14, 165, 233, 0.35);
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-photo-label {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      padding: 16px 18px;
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(8px);
+      border-left: 3px solid var(--primary-color);
+      border-radius: 6px;
+    }
+
+    .about-photo-label h3 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    .about-photo-label p {
+      color: #c5c5c5;
+      font-size: 0.9rem;
+    }
+
+    .about-copy .eyebrow,
+    .experience-heading .eyebrow,
+    .approach-copy .eyebrow {
+      color: var(--primary-color);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .about-copy h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.15;
+      margin: 15px 0 22px;
+    }
+
+    .about-copy h1 span {
+      color: var(--primary-color);
+    }
+
+    .about-copy > p {
+      color: #c5c5c5;
+      font-size: 1rem;
+      line-height: 1.9;
+      margin-bottom: 17px;
+    }
+
+    .about-specialties {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 25px 0 30px;
+    }
+
+    .about-specialties span {
+      padding: 9px 13px;
+      border: 1px solid rgba(14, 165, 233, 0.4);
+      border-radius: 30px;
+      color: #e8f1f8;
+      font-size: 0.82rem;
+      background: rgba(14, 165, 233, 0.07);
+    }
+
+    .about-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    /* EXPERIENCE SECTION */
+    .experience-section {
+      max-width: 1250px;
+      margin: 110px auto 0;
+    }
+
+    .experience-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .experience-heading h2 {
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      margin: 12px 0;
+    }
+
+    .experience-heading p {
+      color: #aaa;
+      line-height: 1.8;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .experience-card {
+      position: relative;
+      padding: 32px 25px;
+      background: #151515;
+      border: 1px solid #292929;
+      border-radius: 14px;
+      transition: 0.3s ease;
+      overflow: hidden;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--primary-color);
+      box-shadow: 0 12px 35px rgba(14, 165, 233, 0.1);
+    }
+
+    .experience-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      background: rgba(14, 165, 233, 0.12);
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    .experience-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .experience-card .role {
+      display: inline-block;
+      color: var(--primary-color);
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.6;
+      margin-bottom: 17px;
+    }
+
+    .experience-card p {
+      color: #aaa;
+      line-height: 1.8;
+      font-size: 0.93rem;
+    }
+
+    .experience-line {
+      width: 45px;
+      height: 3px;
+      background: var(--primary-color);
+      margin-top: 25px;
+      border-radius: 5px;
+    }
+
+    /* CREATIVE APPROACH */
+    .approach-section {
+      max-width: 1250px;
+      margin: 100px auto 0;
+      padding: 45px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #151515, #101b22);
+      border: 1px solid rgba(14, 165, 233, 0.2);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .approach-copy h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.3;
+      margin: 13px 0 18px;
+    }
+
+    .approach-copy p {
+      color: #bdbdbd;
+      line-height: 1.9;
+    }
+
+    .approach-points {
+      display: grid;
+      gap: 18px;
+    }
+
+    .approach-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .approach-point i {
+      color: var(--primary-color);
+      font-size: 1.35rem;
+      margin-top: 2px;
+    }
+
+    .approach-point h4 {
+      color: #fff;
+      margin-bottom: 5px;
+      font-size: 1rem;
+    }
+
+    .approach-point p {
+      color: #aaa;
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    /* MOBILE RESPONSIVENESS */
+    @media (max-width: 900px) {
+      .about-intro {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .about-photo {
+        max-width: 550px;
+        width: 100%;
+        margin: auto;
+        min-height: 400px;
+      }
+
+      .about-photo img {
+        height: 400px;
+      }
+
+      .experience-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .approach-section {
+        grid-template-columns: 1fr;
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .about-page {
+        padding: 115px 6% 60px;
+      }
+
+      .about-photo {
+        min-height: 340px;
+      }
+
+      .about-photo img {
+        height: 340px;
+      }
+
+      .about-copy h1 {
+        font-size: 2.3rem;
+      }
+
+      .experience-section {
+        margin-top: 75px;
+      }
+
+      .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+      }
+
+      .experience-card {
+        padding: 27px 22px;
+      }
+
+      .approach-section {
+        margin-top: 70px;
+        padding: 27px 22px;
+      }
+
+      .about-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+
+  <main class="about-page">
+
+    <!-- INTRODUCTION -->
+    <section class="about-intro">
+
+      <div class="about-photo">
+        <img
+          src="image/img49.jpg"
+          alt="Ogar Doniel Spark working as a camera operator"
+        />
+
+        <div class="about-photo-label">
+          <h3>Ogar Doniel Spark</h3>
+          <p>Video Editor | Film Producer | Cinematographer</p>
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <span class="eyebrow">The Creative Behind The Lens</span>
+
+        <h1>Turning Stories Into <span>Visual Experiences.</span></h1>
+
+        <p>
+          I'm <strong>Ogar Doniel Spark</strong>, a creative video editor,
+          film producer, cinematographer and camera operator passionate
+          about bringing ideas to life through powerful visuals.
+        </p>
+
+        <p>
+          My work covers video production, camera operation,
+          post-production and digital content creation. I enjoy
+          transforming concepts into engaging visual stories that
+          communicate, connect and leave an impression.
+        </p>
+
+        <p>
+          Through my experience with different production teams and
+          media organisations, I have developed practical skills in
+          visual storytelling, production coordination and creative
+          collaboration.
+        </p>
+
+        <div class="about-specialties">
+          <span>Video Editing</span>
+          <span>Film Production</span>
+          <span>Cinematography</span>
+          <span>Camera Operation</span>
+          <span>Post-Production</span>
+        </div>
+
+        <div class="about-actions">
+          <button class="btn">
+            <a href="portfolio.html">View My Work</a>
+          </button>
+
+          <button class="btn">
+            <a href="contact.html">Hire Me</a>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section class="experience-section">
+
+      <div class="experience-heading">
+        <span class="eyebrow">Professional Journey</span>
+        <h2>Teams I've Worked With</h2>
+        <p>
+          Every production experience has contributed to my growth
+          behind the camera and in the editing room. Here are some
+          of the organisations and teams I've worked with.
+        </p>
+      </div>
+
+      <div class="experience-grid">
+
+        <article class="experience-card">
+          <div class="experience-number">01</div>
+
+          <h3>Carel Films</h3>
+
+          <span class="role">
+            Production & Camera Operator
+          </span>
+
+          <p>
+            Working in video editing and camera operation,
+            contributing to production activities and visual
+            content delivery.
+          </p>
+
+          <div class="experience-line"></div>
+        </article>
+
+        <article class="experience-card">
+          <div class="experience-number">02</div>
+
+          <h3>Testimony Jaga</h3>
+
+          <span class="role">
+            Media Team Lead
+          </span>
+
+          <p>
+            Led and coordinated media-team activities,
+            supporting production planning, teamwork
+            and delivery of media projects.
+          </p>
+
+          <div class="experience-line"></div>
+        </article>
+
+        <article class="experience-card">
+          <div class="experience-number">03</div>
+
+          <h3>LXP TV</h3>
+
+          <span class="role">
+            Camera Operator & Video Editor
+          </span>
+
+          <p>
+            Contributed to visual content production through
+            camera operation and video editing, combining
+            technical skills with creative storytelling.
+          </p>
+
+          <div class="experience-line"></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CREATIVE APPROACH -->
+    <section class="approach-section">
+
+      <div class="approach-copy">
+        <span class="eyebrow">My Creative Approach</span>
+
+        <h2>More Than Just Capturing Moments.</h2>
+
+        <p>
+          Great visuals are not only about what the camera sees.
+          They are about the story, the emotion and the experience
+          behind every frame. I bring creativity, technical
+          understanding and collaboration together to make
+          every production meaningful.
+        </p>
+      </div>
+
+      <div class="approach-points">
+
+        <div class="approach-point">
+          <i class="ri-film-line"></i>
+          <div>
+            <h4>Visual Storytelling</h4>
+            <p>Creating engaging visual narratives that communicate ideas effectively.</p>
+          </div>
+        </div>
+
+        <div class="approach-point">
+          <i class="ri-camera-3-line"></i>
+          <div>
+            <h4>Production Excellence</h4>
+            <p>Combining camera skills and production knowledge to capture compelling visuals.</p>
+          </div>
+        </div>
+
+        <div class="approach-point">
+          <i class="ri-team-line"></i>
+          <div>
+            <h4>Creative Collaboration</h4>
+            <p>Working with teams to bring creative concepts and production goals together.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- LOAD NAVBAR -->
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      })
+      .catch(error => console.error("Navbar loading error:", error));
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

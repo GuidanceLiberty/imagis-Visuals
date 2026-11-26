@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the creative, technical and production skills of Ogar Doniel Spark at IMAGIS VISUALS." />
+  <title>Skills | IMAGIS VISUALS</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <style>
+    /* SKILLS PAGE */
+    .skills-page {
+      padding: 145px 7% 90px;
+      background: var(--black);
+      color: var(--white);
+      min-height: 100vh;
+    }
+
+    .skills-hero {
+      max-width: 850px;
+      margin: 0 auto 65px;
+      text-align: center;
+    }
+
+    .skills-hero .eyebrow,
+    .skills-category-heading .eyebrow {
+      color: var(--primary-color);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .skills-hero h1 {
+      font-size: clamp(2.3rem, 5vw, 3.7rem);
+      line-height: 1.2;
+      margin: 17px 0;
+    }
+
+    .skills-hero h1 span {
+      color: var(--primary-color);
+    }
+
+    .skills-hero p {
+      color: #aaa;
+      line-height: 1.9;
+      max-width: 680px;
+      margin: auto;
+    }
+
+    /* CATEGORY SECTIONS */
+    .skills-category {
+      max-width: 1250px;
+      margin: 0 auto 75px;
+    }
+
+    .skills-category-heading {
+      margin-bottom: 28px;
+    }
+
+    .skills-category-heading h2 {
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      margin: 10px 0;
+    }
+
+    .skills-category-heading p {
+      color: #999;
+      line-height: 1.7;
+      font-size: 0.94rem;
+    }
+
+    /* SKILL CARDS */
+    .creative-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .creative-skill-card {
+      position: relative;
+      padding: 29px 25px;
+      background: #151515;
+      border: 1px solid #292929;
+      border-radius: 14px;
+      transition: 0.3s ease;
+      overflow: hidden;
+    }
+
+    .creative-skill-card:hover {
+      transform: translateY(-7px);
+      border-color: var(--primary-color);
+      background: #191919;
+      box-shadow: 0 12px 30px rgba(14, 165, 233, 0.08);
+    }
+
+    .creative-skill-icon {
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: rgba(14, 165, 233, 0.12);
+      color: var(--primary-color);
+      font-size: 1.7rem;
+      margin-bottom: 23px;
+    }
+
+    .creative-skill-card h3 {
+      color: #fff;
+      font-size: 1.12rem;
+      margin-bottom: 11px;
+    }
+
+    .creative-skill-card p {
+      color: #aaa;
+      font-size: 0.91rem;
+      line-height: 1.8;
+    }
+
+    /* SOFTWARE SECTION */
+    .software-section {
+      max-width: 1250px;
+      margin: 0 auto 80px;
+    }
+
+    .software-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .software-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 25px 22px;
+      border: 1px solid #292929;
+      border-radius: 13px;
+      background: #151515;
+      transition: 0.3s ease;
+    }
+
+    .software-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary-color);
+    }
+
+    .software-logo {
+      width: 55px;
+      height: 55px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: rgba(14, 165, 233, 0.12);
+      color: var(--primary-color);
+      font-size: 1.8rem;
+    }
+
+    .software-card h3 {
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .software-card p {
+      color: #999;
+      font-size: 0.82rem;
+    }
+
+    /* CREATIVE STRENGTHS */
+    .creative-strengths {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 45px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #151515, #10212a);
+      border: 1px solid rgba(14, 165, 233, 0.25);
+    }
+
+    .strengths-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .strengths-heading span {
+      color: var(--primary-color);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .strengths-heading h2 {
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      margin-top: 12px;
+    }
+
+    .strengths-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .strength-item {
+      text-align: center;
+      padding: 15px;
+    }
+
+    .strength-item i {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 13px;
+      display: inline-block;
+    }
+
+    .strength-item h3 {
+      font-size: 1rem;
+      margin-bottom: 9px;
+    }
+
+    .strength-item p {
+      color: #aaa;
+      font-size: 0.87rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 900px) {
+      .creative-skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .software-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .skills-page {
+        padding: 120px 6% 65px;
+      }
+
+      .skills-hero {
+        margin-bottom: 50px;
+      }
+
+      .creative-skills-grid,
+      .software-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-category {
+        margin-bottom: 60px;
+      }
+
+      .creative-skill-card {
+        padding: 27px 22px;
+      }
+
+      .creative-strengths {
+        padding: 30px 20px;
+      }
+
+      .strengths-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+
+  <main class="skills-page">
+
+    <!-- INTRODUCTION -->
+    <section class="skills-hero">
+
+      <span class="eyebrow">Behind The Creativity</span>
+
+      <h1>
+        Skills That Bring
+        <span>Stories To Life.</span>
+      </h1>
+
+      <p>
+        A combination of creative vision, technical production
+        knowledge and editing expertise. I bring ideas together
+        through the art of cinematography, video production
+        and visual storytelling.
+      </p>
+
+    </section>
+
+    <!-- PRODUCTION SKILLS -->
+    <section class="skills-category">
+
+      <div class="skills-category-heading">
+        <span class="eyebrow">01 / Production</span>
+        <h2>Production & Cinematography</h2>
+        <p>Practical skills used to capture, create and produce visual content.</p>
+      </div>
+
+      <div class="creative-skills-grid">
+
+        <article class="creative-skill-card">
+          <div class="creative-skill-icon">
+            <i class="ri-camera-3-line"></i>
+          </div>
+          <h3>Camera Operation</h3>
+          <p>
+            Operating cameras to capture production footage,
+            with attention to framing, composition and
+            visual presentation.
+          </p>
+        </article>
+
+        <article class="creative-skill-card">
+          <div class="creative-skill-icon">
+            <i class="ri-film-line"></i>
+          </div>
+          <h3>Cinematography</h3>
+          <p>
+            Creating compelling visuals through camera
+            positioning, movement, composition and
+            visual storytelling.
+          </p>
+        </article>
+
+        <article class="creative-skill-card">
+          <div class="creative-skill-icon">
+            <i class="ri-clapperboard-line"></i>
+          </div>
+          <h3>Film Production</h3>
+          <p>
+            Understanding production workflows and
+            contributing to the planning and execution
+            of creative projects.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EDITING SKILLS -->
+    <section class="skills-category">
+
+      <div class="skills-category-heading">
+        <span class="eyebrow">02 / Post-Production</span>
+        <h2>Editing & Post-Production</h2>
+        <p>Turning recorded footage into polished and engaging visual experiences.</p>
+      </div>
+
+      <div class="creative-skills-grid">
+
+        <article class="creative-skill-card">
+          <div class="creative-skill-icon">
+            <i class="ri-video-edit-line"></i>
+          </div>
+          <h3>Video Editing</h3>
+          <p>
+            Editing and arranging footage into engaging
+            video content with attention to timing,
+            flow and storytelling.
+          </p>
+        </article>
+
+        <article class="creative-skill-card">
+          <div class="creative-skill-icon">
+            <i class="ri-movie-2-line"></i>
+          </div>
+          <h3>Post-Production</h3>
+          <p>
+            Refining video projects through editing
+            and post-production processes to achieve
+            a cohesive final output.
+          </p>
+        </article>
+
+        <article class="creative-skill-card">
+          <div class="creative-skill-icon">
+            <i class="ri-play-circle-line"></i>
+          </div>
+          <h3>Content Creation</h3>
+          <p>
+            Creating visual content for music, events
+            and digital platforms with an emphasis
+            on audience engagement.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CREATIVE AND TEAM SKILLS -->
+    <section class="skills-category">
+
+      <div class="skills-category-heading">
+        <span class="eyebrow">03 / Creative Collaboration</span>
+        <h2>Creative & Team Skills</h2>
+        <p>Working with people and ideas to deliver effective production outcomes.</p>
+      </div>
+
+      <div class="creative-skills-grid">
+
+        <article class="creative-skill-card">
+          <div class="creative-skill-icon">
+            <i class="ri-team-line"></i>
+          </div>
+          <h3>Media Team Coordination</h3>
+          <p>
+            Coordinating media-team activities and
+            supporting organised production delivery
+            through collaboration.
+          </p>
+        </article>
+
+        <article class="creative-skill-card">
+          <div class="creative-skill-icon">
+            <i class="ri-user-star-line"></i>
+          </div>
+          <h3>Team Leadership</h3>
+          <p>
+            Guiding team activities, encouraging
+            collaboration and helping coordinate
+            creative production responsibilities.
+          </p>
+        </article>
+
+        <article class="creative-skill-card">
+          <div class="creative-skill-icon">
+            <i class="ri-lightbulb-line"></i>
+          </div>
+          <h3>Visual Storytelling</h3>
+          <p>
+            Communicating ideas and emotions through
+            creative visual presentation and
+            compelling stories.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SOFTWARE EXPERTISE -->
+    <section class="software-section">
+
+      <div class="skills-category-heading">
+        <span class="eyebrow">Creative Toolkit</span>
+        <h2>Software & Editing Tools</h2>
+        <p>
+          The creative applications I use in video editing
+          and post-production.
+        </p>
+      </div>
+
+      <div class="software-grid">
+
+        <article class="software-card">
+          <div class="software-logo">
+            <i class="ri-movie-2-line"></i>
+          </div>
+          <div>
+            <h3>Adobe Premiere Pro</h3>
+            <p>Professional Video Editing</p>
+          </div>
+        </article>
+
+        <article class="software-card">
+          <div class="software-logo">
+            <i class="ri-film-line"></i>
+          </div>
+          <div>
+            <h3>DaVinci Resolve</h3>
+            <p>Video Editing & Post-Production</p>
+          </div>
+        </article>
+
+        <article class="software-card">
+          <div class="software-logo">
+            <i class="ri-smartphone-line"></i>
+          </div>
+          <div>
+            <h3>CapCut</h3>
+            <p>Creative Video Editing</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CREATIVE STRENGTHS -->
+    <section class="creative-strengths">
+
+      <div class="strengths-heading">
+        <span>What Defines My Work</span>
+        <h2>The Strength Behind Every Production</h2>
+      </div>
+
+      <div class="strengths-grid">
+
+        <div class="strength-item">
+          <i class="ri-eye-line"></i>
+          <h3>Attention To Detail</h3>
+          <p>
+            Paying attention to the visual details
+            that contribute to quality production.
+          </p>
+        </div>
+
+        <div class="strength-item">
+          <i class="ri-team-line"></i>
+          <h3>Collaboration</h3>
+          <p>
+            Working effectively with creative teams
+            to bring production ideas together.
+          </p>
+        </div>
+
+        <div class="strength-item">
+          <i class="ri-lightbulb-flash-line"></i>
+          <h3>Creative Thinking</h3>
+          <p>
+            Approaching projects with creativity
+            and a focus on visual communication.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- LOAD NAVBAR -->
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      })
+      .catch(error => console.error("Navbar loading error:", error));
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

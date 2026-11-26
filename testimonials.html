@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Read testimonials and feedback from people who have worked with Ogar Doniel Spark and IMAGIS VISUALS." />
+  <title>Testimonials | IMAGIS VISUALS</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <style>
+    .testimonials-page {
+      min-height: 100vh;
+      padding: 145px 7% 90px;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .testimonials-hero {
+      max-width: 850px;
+      margin: 0 auto 65px;
+      text-align: center;
+    }
+
+    .testimonials-hero .eyebrow {
+      color: var(--primary-color);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .testimonials-hero h1 {
+      font-size: clamp(2.3rem, 5vw, 3.7rem);
+      line-height: 1.2;
+      margin: 17px 0;
+    }
+
+    .testimonials-hero h1 span {
+      color: var(--primary-color);
+    }
+
+    .testimonials-hero p {
+      color: #aaa;
+      line-height: 1.9;
+      max-width: 680px;
+      margin: auto;
+    }
+
+    /* TESTIMONIAL GRID */
+    .testimonial-showcase {
+      max-width: 1250px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      align-items: start;
+    }
+
+    .testimonial-showcase-card {
+      background: #151515;
+      border: 1px solid #292929;
+      border-radius: 16px;
+      padding: 18px;
+      overflow: hidden;
+      transition: 0.35s ease;
+    }
+
+    .testimonial-showcase-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--primary-color);
+      box-shadow: 0 15px 35px rgba(14, 165, 233, 0.09);
+    }
+
+    .testimonial-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 17px;
+    }
+
+    .testimonial-top span {
+      color: #aaa;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .testimonial-top i {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+    }
+
+    .testimonial-image {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #101010;
+      border-radius: 10px;
+      overflow: hidden;
+      min-height: 180px;
+    }
+
+    .testimonial-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 650px;
+      object-fit: contain;
+    }
+
+    .testimonial-caption {
+      padding: 18px 5px 5px;
+    }
+
+    .testimonial-caption h3 {
+      color: #fff;
+      font-size: 1.05rem;
+      margin-bottom: 7px;
+    }
+
+    .testimonial-caption p {
+      color: #999;
+      font-size: 0.87rem;
+      line-height: 1.7;
+    }
+
+    /* TRUST SECTION */
+    .testimonial-message {
+      max-width: 1250px;
+      margin: 85px auto 0;
+      padding: 45px 30px;
+      text-align: center;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #151515, #10212a);
+      border: 1px solid rgba(14, 165, 233, 0.25);
+    }
+
+    .testimonial-message > i {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+    }
+
+    .testimonial-message h2 {
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      margin: 17px 0;
+    }
+
+    .testimonial-message p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #aaa;
+      line-height: 1.9;
+    }
+
+    .testimonial-message .btn {
+      display: inline-block;
+    }
+
+    @media (max-width: 950px) {
+      .testimonial-showcase {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .testimonials-page {
+        padding: 120px 6% 65px;
+      }
+
+      .testimonials-hero {
+        margin-bottom: 45px;
+      }
+
+      .testimonial-showcase {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .testimonial-showcase-card {
+        padding: 15px;
+      }
+
+      .testimonial-message {
+        margin-top: 65px;
+        padding: 35px 22px;
+      }
+
+      .testimonial-message .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+
+  <main class="testimonials-page">
+
+    <!-- INTRODUCTION -->
+    <section class="testimonials-hero">
+
+      <span class="eyebrow">Words That Matter</span>
+
+      <h1>
+        Experiences That
+        <span>Speak For Themselves.</span>
+      </h1>
+
+      <p>
+        Every creative collaboration is an opportunity to make
+        an impact. Here's what people have shared about their
+        experiences working with me and the work we have
+        created together.
+      </p>
+
+    </section>
+
+    <!-- TESTIMONIAL SHOWCASE -->
+    <section class="testimonial-showcase">
+
+      <!-- TESTIMONIAL 1 -->
+      <article class="testimonial-showcase-card">
+        <div class="testimonial-top">
+          <span>TESTIMONIAL 01</span>
+          <i class="ri-double-quotes-r"></i>
+        </div>
+
+        <div class="testimonial-image">
+          <img src="image/testimonial-1.jpg"
+            alt="First testimonial for Ogar Doniel Spark" loading="lazy" />
+        </div>
+
+        <div class="testimonial-caption">
+          <h3>Client Feedback</h3>
+          <p>A reflection of a creative collaboration and shared experience.</p>
+        </div>
+      </article>
+
+      <!-- TESTIMONIAL 2 -->
+      <article class="testimonial-showcase-card">
+        <div class="testimonial-top">
+          <span>TESTIMONIAL 02</span>
+          <i class="ri-double-quotes-r"></i>
+        </div>
+
+        <div class="testimonial-image">
+          <img src="image/testimonial-2.jpg"
+            alt="Second testimonial for Ogar Doniel Spark" loading="lazy" />
+        </div>
+
+        <div class="testimonial-caption">
+          <h3>Client Feedback</h3>
+          <p>Another experience from working together on creative projects.</p>
+        </div>
+      </article>
+
+      <!-- TESTIMONIAL 3 -->
+      <article class="testimonial-showcase-card">
+        <div class="testimonial-top">
+          <span>TESTIMONIAL 03</span>
+          <i class="ri-double-quotes-r"></i>
+        </div>
+
+        <div class="testimonial-image">
+          <img src="image/testimonial-3.jpg"
+            alt="Third testimonial for Ogar Doniel Spark" loading="lazy" />
+        </div>
+
+        <div class="testimonial-caption">
+          <h3>Client Feedback</h3>
+          <p>Feedback that highlights the value of creative teamwork.</p>
+        </div>
+      </article>
+
+      <!-- TESTIMONIAL 4 -->
+      <article class="testimonial-showcase-card">
+        <div class="testimonial-top">
+          <span>TESTIMONIAL 04</span>
+          <i class="ri-double-quotes-r"></i>
+        </div>
+
+        <div class="testimonial-image">
+          <img src="image/testimonial-4.jpg"
+            alt="Fourth testimonial for Ogar Doniel Spark" loading="lazy" />
+        </div>
+
+        <div class="testimonial-caption">
+          <h3>Client Feedback</h3>
+          <p>Another reflection of a professional creative experience.</p>
+        </div>
+      </article>
+
+      <!-- TESTIMONIAL 5 -->
+      <article class="testimonial-showcase-card">
+        <div class="testimonial-top">
+          <span>TESTIMONIAL 05</span>
+          <i class="ri-double-quotes-r"></i>
+        </div>
+
+        <div class="testimonial-image">
+          <img src="image/testimonial-5.jpg"
+            alt="Fifth testimonial for Ogar Doniel Spark" loading="lazy" />
+        </div>
+
+        <div class="testimonial-caption">
+          <h3>Client Feedback</h3>
+          <p>Feedback from another creative collaboration.</p>
+        </div>
+      </article>
+
+      <!-- TESTIMONIAL 6 -->
+      <article class="testimonial-showcase-card">
+        <div class="testimonial-top">
+          <span>TESTIMONIAL 06</span>
+          <i class="ri-double-quotes-r"></i>
+        </div>
+
+        <div class="testimonial-image">
+          <img src="image/testimonial-6.jpg"
+            alt="Sixth testimonial for Ogar Doniel Spark" loading="lazy" />
+        </div>
+
+        <div class="testimonial-caption">
+          <h3>Client Feedback</h3>
+          <p>A further account of working together on creative projects.</p>
+        </div>
+      </article>
+
+      <!-- TESTIMONIAL 7 -->
+      <article class="testimonial-showcase-card">
+        <div class="testimonial-top">
+          <span>TESTIMONIAL 07</span>
+          <i class="ri-double-quotes-r"></i>
+        </div>
+
+        <div class="testimonial-image">
+          <img src="image/testimonial-7.jpg"
+            alt="Seventh testimonial for Ogar Doniel Spark" loading="lazy" />
+        </div>
+
+        <div class="testimonial-caption">
+          <h3>Client Feedback</h3>
+          <p>One more perspective from a creative working relationship.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="testimonial-message">
+
+      <i class="ri-chat-quote-line"></i>
+
+      <h2>Let's Create Something Worth Talking About.</h2>
+
+      <p>
+        Have a project, production or creative idea in mind?
+        I'd love to hear about it and explore how we can
+        bring it to life together.
+      </p>
+
+      <button class="btn">
+        <a href="contact.html">Start A Conversation</a>
+      </button>
+
+    </section>
+
+  </main>
+
+  <!-- LOAD NAVBAR -->
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      })
+      .catch(error => console.error("Navbar loading error:", error));
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
